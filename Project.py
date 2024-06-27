@@ -10,7 +10,7 @@ st.caption("Muhammad Faris Akbar | 2100018169")
 sns.set(style="whitegrid")
 
 # Membaca file CSV ke dalam DataFrame
-data = pd.read_csv('Groceries_dataset.csv', delimiter=',')
+data = pd.read_csv('https://raw.githubusercontent.com/ArmFriiz/Visualisasi_Data/main/Groceries_dataset.csv', delimiter=',')
 
 # Streamlit application
 st.title("Analisis dan Prediksi Penjualan Grocery")
