@@ -205,7 +205,7 @@ with left_2:
     monthly_forecast = forecast_arima(monthly_sales, 12)
     fig, ax = plt.subplots(figsize=(14, 4))
     ax.plot(monthly_sales.index, monthly_sales.values, label='Actual')
-    ax.plot(pd.date_range(monthly_sales.index[-1], periods=12, freq='M'), monthly_forecast, label='Forecast', color='red')
+    ax.plot(pd.date_range(monthly_sales.index[-1], periods=12, freq='ME'), monthly_forecast, label='Forecast', color='red')
     ax.set_title('Prediksi Penjualan 12 Bulan Ke Depan')
     ax.set_xlabel('Bulan')
     ax.set_ylabel('Jumlah Penjualan')
@@ -218,7 +218,7 @@ with right_2:
             sales_data.index = sales_data.index.to_timestamp()
             forecast = forecast_arima(sales_data, 12)
         
-            forecast_index = pd.date_range(sales_data.index[-1], periods=12, freq='M')
+            forecast_index = pd.date_range(sales_data.index[-1], periods=12, freq='ME')
 
             fig, ax = plt.subplots(figsize=(14, 4))
             ax.plot(sales_data.index, sales_data.values, label='Actual')
